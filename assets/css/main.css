@@ -1751,7 +1751,8 @@
 		margin: 0 0 1.125em 0;
 	}
 
-	input::-moz-focus-inner {
+	input::-moz-focus-
+{
 		border: 0;
 		padding: 0;
 	}
@@ -2439,7 +2440,7 @@
 		.features article .inner {
 			display: inline-block;
 			vertical-align: middle;
-			width: 50%;
+			width: 70%;
 		}
 
 			.features article .inner > :last-child {
