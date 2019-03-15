@@ -2440,7 +2440,7 @@
 		.features article .inner {
 			display: inline-block;
 			vertical-align: middle;
-			width: 70%;
+			width: 100%;
 		}
 
 			.features article .inner > :last-child {
