@@ -1,611 +1,399 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avik Sarkar - Test Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>A</text></svg>">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/scripts/small_functions.js"></script>
+</head>
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <div class="max-w-6xl mx-auto my-8 border-2 rounded-xl overflow-hidden shadow-lg">
+        <header class="bg-white shadow-md py-4 sticky top-0 z-50" id="navigations">
+            <nav class="container flex justify-between items-center">
+                <a href="#hero" class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">Avik Sarkar</a>
+                <ul class="flex space-x-6">
+                    <li>
+                        <a href="#hero" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l-7 7m7-7v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                            Hello
+                        </a>
+                    </li>
+                    <li class="relative">
+                        <button id="leisuresDropdownBtn" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100 flex items-center gap-2 focus:outline-none">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                            Leisures
+                            <svg class="w-4 h-4 ml-1 transform transition-transform duration-200" id="dropdownArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="leisuresDropdownContent" class="dropdown-content">
+                            <a href="https://sites.google.com/view/iamavik/" target="_blank">I AM AVIK</a>
+                            <a href="https://ojsolver.blogspot.com/" target="_blank">Probtoreal</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://flowcv.com/resume/9gt3hk210o" target="_blank" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Resume
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-<html>
-	<head>
-		<title>ssavi</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-indigo-600 text-white py-16 text-center rounded-b-3xl shadow-lg">
+            <div class="container">
+                <h1 class="text-5xl font-extrabold mb-4 animate-fade-in-up">Hi, I'm Avik Sarkar</h1>
+                <p class="text-xl mb-8 opacity-90 animate-fade-in-up delay-200">A test engineer specializing in bluetooth feature testing and automation.</p>
+                <div class="flex justify-center space-x-4 animate-fade-in-up delay-400">
+                    <a href="https://topmate.io/aviksarkar" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-block">Mentorship</a>
+                    <a href="https://www.linkedin.com/in/ssavi-ict/" target="_blank" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center gap-2">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.75A1.75 1.75 0 118.25 5 1.75 1.75 0 016.5 6.75zM19 19h-3v-5.604c0-3.368-4-3.113-4 0V19H9V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/ssavi-ict" target="_blank" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center gap-2">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.49.998.108-.775.418-1.305.762-1.605-2.665-.3-5.464-1.334-5.464-5.93 0-1.31.465-2.38 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1.005-.32 3.3 1.23a11.55 11.55 0 016 0c2.295-1.55 3.3-1.23 3.3-1.23.652 1.656.237 2.876.117 3.176.77.84 1.235 1.91 1.235 3.22 0 4.606-2.8 5.62-5.475 5.92.43.37.823 1.102.823 2.222v3.293c0 .318.22.687.823.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#projects" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-block">My Works</a>
+                </div>
+            </div>
+        </section>
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/Ano.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Avik Sarkar</a></h1>
-					<p>Just another noob problem solver.</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Interests</a></li>
-						<li><a href="#three">Schooling</a></li>
-						<li><a href="#two-for-contest-info">Programming Contest</a></li>
-						<li><a href="#three-for-projects">Projects</a></li>
-						<li><a href="#four-for-publications">Publications</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<!-- <ul class="icons">
-						<li><a href="https://twitter.com/ssavi_ict" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://web.facebook.com/avik.sarkar.77" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/ssavi.ict/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/ssavi-ict" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://ssavi.ict@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-					</ul> -->
-				</footer>
-			</section>
+        <!-- About Section -->
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    About Me
+                </h2>
+                <div class="card p-8 md:flex items-center space-y-6 md:space-y-0 md:space-x-8">
+                    <div class="flex-shrink-0">
+                        <img src="images/avik_sarkar.jpg" alt="avik_sarkar" class="w-48 h-48 rounded-full object-cover shadow-lg mx-auto md:mx-0">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <p class="text-lg leading-relaxed mb-4">
+                            Hello! I'm Avik Sarkar, a Test Engineer with <span id="experience-years"></span> years of experience in Test Engineering. I'm passionate about AI and automation.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            My journey in Test Engineering has equipped me with a strong foundation in Test Automation and Quality Assurance. I thrive on learning and innovating newer approaches in the field of test engineering.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Work Experiences Section -->
+        <section id="experience" class="bg-gray-100">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 10h2m2 0h2m2 0h2m2 0h2M7 21h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Work Experiences
+                </h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- Experience 1 -->
+                    <div class="item-card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Test Engineer (L4) - Google</h3>
+                        <p class="text-gray-600 text-sm mb-2 italic">July 2024 - Present</p>
+                        <h4 class="text-l font-semibold text-gray-800 mb-2 pt-5">Responsibilities</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Develop test strategy, automation planning, automation for bluetooth features on pixel phones.</li>
+                            <li>Maintain an develop features for machine learning solution to identify test flakiness.</li>
+                            <li>Develop large language model leaveraged bug triage tool.</li>
+                        </ul>
+                        <h4 class="text-l font-semibold text-gray-800 mb-2 pt-5">Achievements</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Kudos/peer bonuses.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="item-card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Test Engineer (L4) - Samsung R&D Institute Bangladesh</span></h3>
+                        <p class="text-gray-600 text-sm mb-2 italic">September 2018 - June 2024</p>
+                        <h4 class="text-l font-semibold text-gray-800 mb-2 pt-5">Responsibilities</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Visual studio extension tool development.</li>
+                            <li>Menu tree exploration tool development.</li>
+                            <li>Ultrasound report analysis tool development.</li>
+                            <li>UI automation framework development.</li>
+                            <li>Samsung Experience Service - features automation solution development.</li>
+                        </ul>
+                        <h4 class="text-l font-semibold text-gray-800 mb-2 pt-5">Achievements</h4>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed">
+                            <li>Live camera image superposition rendering patent innovation.</li>
+                            <li>Professional level coding certification by Samsung Research</li>
+                            <li>SRBD Inventor, DOI, and Icon award</li>
+                        </ul>
+                    </div>
+                    <!-- Add more experiences as needed -->
+                </div>
+            </div>
+        </section>
 
-				<!-- Main -->
-					<div id="main">
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    My Skills
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                    <div class="card text-center">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">Automation Tool Development</h3>
+                        <p class="text-gray-600">Python, Flask, Appium, Selenium, Javascript, Pytest</p>
+                    </div>
+                    <div class="card text-center">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">LLM / Machine Learning</h3>
+                        <p class="text-gray-600">Prompting, Python, Langchain</p>
+                    </div>
+                    <div class="card text-center">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">Algorithmic Problem Solving</h3>
+                        <p class="text-gray-600">C/C++, Data Structures, Algorithms, Competitive Programming</p>
+                    </div>
+                    <div class="card text-center">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">Tools & Technologies</h3>
+                        <p class="text-gray-600">Git, Fig, VScode, PyCharm, Jira, Confluence</p>
+                    </div>
+                    <div class="card text-center">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">Soft Skills</h3>
+                        <p class="text-gray-600">Problem Solving, Communication, Teamwork, Adaptability, Project Management</p>
+                    </div>
+                    <div class="card text-center">
+                        <h3 class="text-xl font-semibold mb-3 text-indigo-700">Other Skills</h3>
+                        <p class="text-gray-600">Career Guidelines, Resume Review, Interviewing, Mentorship</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						<!-- One -->
-							<section id="one">
-								<div class="container">
-									<header class="major">
-										<h3>About Me</h3>
-										<p>Hi !!! I am Avik Sarkar. Just a random guy
-										with a sack of wishes and hopes.</p>
-									</header>
-									<p>I am a student. Completing my graduation from Department of ICT, Comilla University. Now in Final Year. Programming is my passion, love, life whatever you think. Competitive Programming and Problem Solving is just in my blood. I love solving different types of 
-									programming problems. Along with this I love setting different types of interesting problems .I always love learning new things and thinking new ideas. Apart from that I love doing mathematics, solving puzzles, travelling new places, reading books, watching movies, doing card tricks. I love to listen music very much. 
-									My cherished dream is to be an IT expert. I hope some day I can do that. </p>
-									<p>Sometime I write several articles about several topic in my blog. You can check out my blog in the following link : <a href = "http://ojsolver.blogspot.com" target="_blank">  <font color="purple">ProbToreal</font> </a> </p>
-							</section>
-		
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Love to Do</h3>
-									<p>Some of my loveable deeds are enlisted below. Check out if you are interested - </p>
-									<ul class="feature-icons">
-										<li class="fa-code">Write Codes in C, C++, Java, Python</li>
-										<li class="fa-code">Design Web Pages.</li>
-										<li class="fa-cubes">Solve Puzzles and Maths</li>
-										<li class="fa-book">Read books and stuff</li>
-										<li class="fa-book">Write blogs and articles</li>
-										<li class="fa-coffee">Drink much coffee</li>
-										<li class="fa-bolt">Do Card Tricks</li>
-										<li class="fa-bolt">Draw Pictures</li>
-										<li class="fa-users">Play Footballs and Crickets</li>
-										<li class="fa-users">Play Cards and Chess</li>
-									</ul>
-								</div>
-							</section>
-							
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-100">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7a2 2 0 002 2z"></path></svg>
+                    My Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/400x250/a78bfa/ffffff?text=CrackTech" alt="CrackTech" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">CrackTech - Tech Interview Preparation</h3>
+                        <p class="text-gray-600 mb-4">A web extension that can help you to prepare for your next tech interview.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Javascript</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">CSS</span>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="https://chromewebstore.google.com/detail/cracktech-tech-interview/fmbicfmfmangckllfaomfkhdankgapfk" class="bg-green-600 text-white px-4 py-2 mr-2 ml-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">Chrome Web Store</a>
+                            <a href="https://github.com/ssavi-ict/LeetCode-Which-Company" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">Github</a>
+                        </div>
+                    </div>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Academic Background</h3>
-									<p>A simple summary of my academic background. Check if you are interested.</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Primary Level</h4>
-												<p>Completed at 2005 from <b>Fateyabad Ramkrishna Govt. Primary School</b>. </p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Secondary School Certificate</h4>
-												<p>Completed at 2010 from <b>Fateyabad Model and Multilateral High School</b>. Obtained GPA 5.00 from Science stream. </p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Higher Secondary School Certificate</h4>
-												<p>Completed at 2012 from <b>Fateyabad College</b>. Obtained GPA 4.90 from Science stream.</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Graduation</h4>
-												<p>Ongoing. Level - 4 Term - 2 Running. Doing from <b>Department of ICT, Comilla University</b>. CGPA: 3.70 ( upto L-4 T-1 )</p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/400x250/60a5fa/ffffff?text=Text Summarization" alt="text-summarization" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Automatic Text Summarization in Bangla Language</h3>
+                        <p class="text-gray-600 mb-4">Automatic Bangla Language Summarixation using NLTK</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Pythan</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NLTK</span>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="https://github.com/ssavi-ict/Automatic-Text-Summarization-in-Bangla-Language" class="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-indigo-700 transition duration-300 shadow-md">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						
-						<!-- Two For Programming Info-->
-							<section id="two-for-contest-info">
-								<div class="container">
-									<h3>Programming Contests Informations</h3>
-									<p>List of some Onsite Programming Contest that I have participated. </p>
-									<ul class="feature-icons">
-										<li class="fa-code">AUB IUPC [ Ranked 10th ]</li>
-										<li class="fa-code">CoU CSE Fiesta Contest-18 [Ranked 3rd]</li>
-										<li class="fa-code">EDU Engg. Day IUPC-18 [Ranked 6th]</li>
-										<li class="fa-code">CUET NCPC-17 [Ranked 19th]</li>
-										<li class="fa-code">USTC Techtronics IUPC-16 [Ranked 2nd]</li>
-										<li class="fa-code">SUST IUPC-17 [Ranked 21st]</li>
-									</ul>
-									
-									<h3>Online Judge's Handle</h3>
-									<p>List of some Online Judge's ID are listed below - </p>
-									<ul class="feature-icons">
-										<li class="fa-code">Codeforces: <a href = "http://codeforces.com/profile/ssavi" target="_blank">ssavi</a></li>
-										<li class="fa-code">HackerRank: <a href = "https://www.hackerrank.com/ssavi" target="_blank">ssavi</a></li>
-										<li class="fa-code">Codechef: <a href = "https://www.codechef.com/users/ssavi" target="_blank">ssavi</a></li>
-										<li class="fa-code">UVa: <a href = "http://uhunt.onlinejudge.org/id/412026" target="_blank">ssavi</a></li>
-										<li class="fa-code">LightOJ: <a href = "http://lightoj.com/volume_userstat.php?user_id=16466" target="_blank">AVIK SARKAR</a></li>
-										<li class="fa-code">Devskill: <a href = "https://www.devskill.com/Home/PublicProfile/ssavi" target="_blank">ssavi</a></li>
-									</ul>
-									
-								</div>
-							</section>
-						
-						<section id="three-for-projects">
-								<div class="container">
-									<h3>Projects</h3>
-									<p>Some of my project works</p>
-									<div class="features">
-										<article>
-											<div class="inner">
-												<h4 class = "icon fa-check"> FM Radio Transmitter</h4>
-												<p>A hardware project that works as a FM station. <br/>Link: <a href = "https://github.com/ssavi-ict/Project-Works/blob/master/FM%20Radio%20Transmitter" target="_blank"> Here </a></p>
-											</div>
-										</article>
-										<article>
-											<div class="inner">
-												<h4 class = "icon fa-check"> Tic Tac Toe</h4>
-												<p>An applet program of very famous Tic Tac Toe game. <br/> Link: <a href = "https://github.com/ssavi-ict/Project-Works/blob/master/tictactoe.java" target="_blank"> Here </a></p>
-											</div>
-										</article>
-										<article>
-											<div class="inner">
-												<h4 class = "icon fa-check"> Online Based Admission System</h4>
-												<p>An online based student enroller platform with online based payment system. <br> Link: <a href = "https://github.com/ssavi-ict/Online-Admission-System" target="_blank"> Here </a></p>
-											</div>
-										</article>
-										<article>
-											
-											<div class="inner">
-												<h4 class = "icon fa-check"> Automatic Bangla Text Summarizer</h4>
-												<p>A tool for summarizing a Bangla article. <br> Link: <a href = "https://github.com/ssavi-ict/Automatic-Text-Summarization-in-Bangla-Language" target="_blank"> Here </a></p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-						<section id="four-for-publications">
-								<div class="container">
-									<h3>Publications</h3>
-									<p>Publications on Journal and Conference</p>
-									<div class="features">
-										<article>
-											<div class="inner">
-												<h5 class = "icon fa-check"> Automatic Bangla Text Summarization Using Term Frequency and Semantic Similarity Approach </h5>
-												<p><b>Conference</b> : <i>2018 21st International Conference of Computer and Information Technology (ICCIT)</i><br>
-												<b>Summary: </b>A research work that depicts automatic text summarization technique using two method. <br/>Link: <a href = "https://ieeexplore.ieee.org/document/8631934" target="_blank"> Here </a></p>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
-						<!-- Four -->
-							
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p> Feel free to knock. I will try to get back to you as soon as possible.
-									<br/>You can mail me at : <i class="icon fa-envelope"> ssavi.ict@gmail.com </i></p>
-									<!-- <form method="post" action="#">
-										<div class="row uniform">
-											<div class="6u 12u(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="6u 12u(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-										</div>
-										<div class="row uniform">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" class="special" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form> -->
-									Other Profiles : 
-									<ul class="icons">
-										<li><a href="https://stackoverflow.com/users/4982627/ssavi" class="icon fa-stack-overflow" target="_blank"><span class="label">Stackoverflow</span></a></li>
-										<li><a href="https://www.quora.com/profile/Ss-Avi" class="fa fa-quora" aria-hidden="true" target="_blank"><span class="label">Quora</span></a></li>
-										<li><a href="https://www.linkedin.com/in/ssavi-ict/" class="icon fa-linkedin" target="_blank"><span class="label">Linked in</span></a></li>
-										<li><a href="https://github.com/ssavi-ict" class="icon fa-github"><span class="label" target="_blank">Github</span></a></li>
-										<li><a href="https://gitlab.com/ssavi-ict" class="icon fa-gitlab"><span class="label" target="_blank">GitLab</span></a></li>
-										<li><a href="https://web.facebook.com/avik.sarkar.77" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-										<li><a href="https://twitter.com/ssavi_ict" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.instagram.com/ssavi.ict/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-										
-									</ul>
-								</div>
-							</section>
-							
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+        <!-- Study Section -->
+        <section id="study">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.523 5.794 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.794 5 16.5 5c1.706 0 3.332.477 4.5 1.253v13C19.832 18.523 18.206 18 16.5 18c-1.706 0-3.332.477-4.5 1.253"></path></svg>
+                    Education
+                </h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <!-- Study 1 -->
+                    <div class="item-card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">BSc. Engineering in ICT <span class="text-gray-500 text-base font-normal italic">- Comilla University</span></h3>
+                        <p class="text-gray-600 text-sm mb-2">2018 | Major: Programming, IT, Networking</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+        <!-- Programming Contest Section -->
+        <section id="contests" class="bg-gray-100">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    Competitive Programming
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Left Block of Contests -->
+                    <div class="item-card">
+                        <h3 class="text-blue-500 text-xl text-center mb-5">Onsite Participation</h3>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
+                            <li>AUB IUPC, 2018 [Rank: <a class="text-indigo-600" href="https://toph.co/c/1st-aub-inter-university/standings" target="_blank">10<sup>th</sup></a>]</li>
+                            <li>CoU CSE FEST IUPC, 2018. [Rank: 3<sup>rd</sup>]</li>
+                            <li>EDU Engineering Day IUPC, 2018. [Rank: 6<sup>th</sup>]</li>
+                            <li>CUET NCPC, 2017 [Rank: <a class="text-indigo-600" href="https://icpc.global/regionals/finder/Bangladesh-CUET-NCPC-2018/standings" target="_blank">19<sup>th</sup></a>]</li>
+                            <li>USTC TechTronics'2016 IUPC [Rank: 2<sup>nd</sup>]</li>
+                            <li>SUST IUPC [Rank: <a class="text-indigo-600" href="https://toph.co/c/sust-inter-2017/standings" target="_blank">21<sup>st</sup></a>]</li>
+                        </ul>
+                    </div>
+                    <!-- Right Block of Contests -->
+                    <div class="item-card">
+                        <h3 class="text-blue-500 text-xl text-center mb-5">Online Handles</h3>
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
+                            <li>Codeforces : <a class="text-indigo-600" href="https://codeforces.com/profile/ssavi" target="_blank" >ssavi</a> (max. 1492), (Solved 713 Problems)</li>
+                            <li>HackerRank : <a class="text-indigo-600" href="https://www.hackerrank.com/profile/ssavi" target="_blank">ssavi</a> (max. 2001), (Solved 105 Problems)</li>
+                            <li>Codechef : <a class="text-indigo-600" href="https://www.codechef.com/users/ssavi" target="_blank">ssavi</a> (max. 1935), (Solved 120 Problems)</li>
+                            <li>UVa : <a class="text-indigo-600" href="https://uhunt.onlinejudge.org/id/412026" target="_blank">ssavi</a> (Solved 520 problems)</li>
+                            <li>LightOJ : <a class="text-indigo-600" href="https://lightoj.com/user/ssavi" target="_blank">ssavi</a> (Solved 153 problems)</li>
+                            <li>SPOJ: <a class="text-indigo-600" href="https://www.spoj.com/users/ssavi/" target="_blank">ssavi</a> (Solved 52 problems)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	while (!deck.isInOrder()) {
-	    print 'Iteration ' + i;
-	    deck.shuffle();
-	    i++;
-	}
+        <section id="interests" class="bg-gray-100">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Things I love to do
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Left Block of Contests -->
+                    <div class="item-card">
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
+                            <li>Spending time with my wife.</li>
+                            <li>Listen to music, audio stories and podcasts.</li>
+                            <li>Series and movies.</li>
+                            <li>Solving puzzles and mathc problems.</li>
+                        </ul>
+                    </div>
+                    <!-- Right Block of Contests -->
+                    <div class="item-card">
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
+                            <li>Watch youtube contents.</li>
+                            <li>Drink americano.</li>
+                            <li>Retrospect and find learnings.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+        <section id="interests" class="bg-gray-100">
+            <div class="container">
+                <h2 class="section-heading text-xl">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                    Bored! Try solving some coding problem I authored
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+                    <!-- Left Block of Contests -->
+                    <div class="item-card">
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
+                            <li><a class="text-indigo-600" href="https://toph.co/p/aaj-kemon-bodh-korcho" target="_blank">Aaj Kemon Bodh Korcho</a></li>
+                            <li><a class="text-indigo-600" href="https://toph.co/p/cake-controversy" target="_blank">Cake Controversy</a></li>
+                            <li><a class="text-indigo-600" href="https://toph.co/p/guti-khela" target="_blank">Guti Khela</a></li> 
+                            <li><a class="text-indigo-600" href="https://toph.co/p/hasan-the-treasure-hunter" target="_blank">Hasan the Treasure Hunter</a></li>
+                        </ul>
+                    </div>
+                    <!-- Right Block of Contests -->
+                    <div class="item-card">
+                        <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-1">
+                            <li><a class="text-indigo-600" href="https://toph.co/p/mr-savior" target="_blank">Mr. Savior</a></li>
+                            <li><a class="text-indigo-600" href="https://toph.co/p/stark-tree" target="_blank">Stark Tree</a></li>
+                            <li><a class="text-indigo-600" href="https://www.hackerrank.com/contests/srbd-code-contest-2022-round-2-retake/challenges/xorland-and-the-super-hero" target="_blank">No Big Deal</a></li> 
+                            <li><a class="text-indigo-600" href="https://www.hackerrank.com/contests/srbd-code-contest-2023-round-2/challenges/magic-tree-2" target="_blank">An Infinite Graph</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="6u 12u(xsmall)">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="6u 12u(xsmall)">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button special">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button special small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="3u 6u(medium) 12u$(xsmall)">
-												<ul class="actions vertical">
-													<li><a href="#" class="button special">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="3u 6u$(medium) 12u$(xsmall)">
-												<ul class="actions vertical small">
-													<li><a href="#" class="button special small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="3u 6u(medium) 12u$(xsmall)">
-												<ul class="actions vertical">
-													<li><a href="#" class="button special fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="3u 6u$(medium) 12u$(xsmall)">
-												<ul class="actions vertical small">
-													<li><a href="#" class="button special small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+        <!-- Publication Section -->
+        <section id="publications">
+            <div class="container">
+                <h2 class="section-heading">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.206 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.523 5.794 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.794 5 16.5 5c1.706 0 3.332.477 4.5 1.253v13C19.832 18.523 18.206 18 16.5 18c-1.706 0-3.332.477-4.5 1.253"></path></svg>
+                    Publications
+                </h2>
+                <div class="grid grid-cols-1 gap-2">
+                    <!-- Publication 1 -->
+                    <div class="item-card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Method and apparatus for generating rendered images through real-time superposition in live camera</h3>
+                        <p class="text-gray-600 text-sm mb-2">Google Patent | Authors: Avik Sarkar, Jewel Kumar Saha, Md. Faisal Khan, Md. Ashraful Islam</p>
+                        <a href="https://patents.google.com/patent/KR20240037742A/en" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300 mt-2 inline-block">Patent No: KR20240037742A</a>
+                    </div>
+                    <!-- Publication 2 -->
+                    <div class="item-card">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Automatic Bangla Text Summarization Using Term Frequency And Semantic Similarity Approach</h3>
+                        <p class="text-gray-600 text-sm mb-2">ICCIT, 2018 | Authors: Avik Sarkar, Md.  Sharif Hossen</p>
+                        <a href="https://ieeexplore.ieee.org/document/8631934" target="_blank" class="text-indigo-600 hover:text-indigo-800 font-medium transition duration-300 mt-2 inline-block">DOI: 10.1109/ICCITECHN.2018.8631934</a>
+                    </div>
+                    <!-- Add more publication entries as needed -->
+                </div>
+            </div>
+        </section>
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+        <!-- Contact Section -->
+        <section id="contact" class="py-6 bg-indigo-600 text-white rounded-t-3xl shadow-lg">
+            <div class="container text-center">
+                <h2 class="section-heading text-white">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13h9a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Get In Touch
+                </h2>
+                <p class="text-lg mb-8">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                <div class="flex flex-col items-center space-y-4">
+                    <a href="mailto:ssavi.ict@gmail.com" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
+                        ssavi.ict@gmail.com
+                    </a>
+                    <p class="text-lg">Connect with me on:</p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.linkedin.com/in/ssavi-ict/" target="_blank" class="text-white hover:text-gray-200 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.75A1.75 1.75 0 118.25 5 1.75 1.75 0 016.5 6.75zM19 19h-3v-5.604c0-3.368-4-3.113-4 0V19H9V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/ssavi-ict" target="_blank" class="text-white hover:text-gray-200 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.49.998.108-.775.418-1.305.762-1.605-2.665-.3-5.464-1.334-5.464-5.93 0-1.31.465-2.38 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1.005-.32 3.3 1.23a11.55 11.55 0 016 0c2.295-1.55 3.3-1.23 3.3-1.23.652 1.656.237 2.876.117 3.176.77.84 1.235 1.91 1.235 3.22 0 4.606-2.8 5.62-5.475 5.92.43.37.823 1.102.823 2.222v3.293c0 .318.22.687.823.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/ssavi.cou" target="_blank" class="text-white hover:text-gray-200 transition duration-300">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 12.0235 4.07843 15.2016 4.07843C16.7629 4.07843 18.324 4.36443 18.324 4.36443V7.18783H16.7629C15.2449 7.18783 14.7645 8.16335 14.7645 9.42398V11.9991H18.2324L17.7298 15.4676H14.7645V23.8524C20.4997 22.9522 23.9981 17.9882 23.9981 11.9991Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
-
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button special">Special</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button special big">Big</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button special fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button special fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button special icon fa-download">Icon</a></li>
-											<li><a href="#" class="button icon fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button special disabled">Special</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
-
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row uniform">
-												<div class="6u 12u(xsmall)">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="6u 12u(xsmall)">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-											</div>
-											<div class="row uniform">
-												<div class="12u">
-													<div class="select-wrapper">
-														<select name="demo-category" id="demo-category">
-															<option value="">- Category -</option>
-															<option value="1">Manufacturing</option>
-															<option value="1">Shipping</option>
-															<option value="1">Administration</option>
-															<option value="1">Human Resources</option>
-														</select>
-													</div>
-												</div>
-											</div>
-											<div class="row uniform">
-												<div class="4u 12u(medium)">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="4u 12u(medium)">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="4u 12u(medium)">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-											</div>
-											<div class="row uniform">
-												<div class="6u 12u(medium)">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="6u 12u(medium)">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-											</div>
-											<div class="row uniform">
-												<div class="12u">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-											</div>
-											<div class="row uniform">
-												<div class="12u">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row 50% uniform">
-												<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-											</div>
-											<div class="row 50% uniform">
-												<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											</div>
-											<div class="row 50% uniform">
-												<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
-
-								</div>
-							</section>
-						-->
-
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; ssavi. All rights reserved.</li><li>Design: HTML5UP & ssavi</li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-6 text-center">
+            <div class="container">
+                <p>&copy; <span id="copyright-year"></span> Avik Sarkar. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
 </html>
