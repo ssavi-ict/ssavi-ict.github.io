@@ -15,10 +15,13 @@
 <body class="antialiased">
     <!-- Header/Navigation -->
     <div class="max-w-6xl mx-auto my-8 border-2 rounded-xl overflow-hidden shadow-lg">
-        <header class="bg-white shadow-md py-4 sticky top-0 z-50" id="navigations">
-            <nav class="container flex justify-between items-center">
-                <a href="#hero" class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">Avik Sarkar</a>
-                <ul class="flex space-x-6">
+        <header class="bg-white shadow-md py-4">
+            <nav class="container flex flex-col sm:flex-row sm:justify-between items-center">
+                <a href="#hero" class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition duration-300 flex items-center">
+                    <span class="inline-flex items-center justify-center w-7 h-7 bg-indigo-700 text-white rounded-full text-xl font-extrabold mr-1">A</span>
+                    vik
+                </a>
+                <ul class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-6 mt-4 sm:mt-0">
                     <li>
                         <a href="#hero" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100 flex items-center gap-2">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m0 0l-7 7m7-7v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
@@ -51,19 +54,20 @@
             <div class="container">
                 <h1 class="text-5xl font-extrabold mb-4 animate-fade-in-up">Hi, I'm Avik Sarkar</h1>
                 <p class="text-xl mb-8 opacity-90 animate-fade-in-up delay-200">A test engineer specializing in bluetooth feature testing and automation.</p>
-                <div class="flex justify-center space-x-4 animate-fade-in-up delay-400">
-                    <a href="https://topmate.io/aviksarkar" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-block">Mentorship</a>
-                    <a href="https://www.linkedin.com/in/ssavi-ict/" target="_blank" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center gap-2">
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-up delay-400">
+                    <a href="https://topmate.io/aviksarkar" target="_blank" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center justify-center gap-2">
+                        <img src="https://topmate.io/favicon.svg" alt="Topmate Icon" class="w-6 h-6 inline-block">
+                    </a>
+                    <a href="https://www.linkedin.com/in/ssavi-ict/" target="_blank" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center justify-center gap-2">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.75A1.75 1.75 0 118.25 5 1.75 1.75 0 016.5 6.75zM19 19h-3v-5.604c0-3.368-4-3.113-4 0V19H9V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <a href="https://github.com/ssavi-ict" target="_blank" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center gap-2">
+                    <a href="https://github.com/ssavi-ict" target="_blank" class="bg-white text-indigo-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-flex items-center justify-center gap-2">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.234c-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.49.998.108-.775.418-1.305.762-1.605-2.665-.3-5.464-1.334-5.464-5.93 0-1.31.465-2.38 1.235-3.22-.12-.3-.535-1.52.117-3.176 0 0 1.005-.32 3.3 1.23a11.55 11.55 0 016 0c2.295-1.55 3.3-1.23 3.3-1.23.652 1.656.237 2.876.117 3.176.77.84 1.235 1.91 1.235 3.22 0 4.606-2.8 5.62-5.475 5.92.43.37.823 1.102.823 2.222v3.293c0 .318.22.687.823.577C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <a href="#projects" class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg inline-block">My Works</a>
                 </div>
             </div>
         </section>
@@ -77,7 +81,7 @@
                 </h2>
                 <div class="card p-8 md:flex items-center space-y-6 md:space-y-0 md:space-x-8">
                     <div class="flex-shrink-0">
-                        <img src="images/avik_sarkar.jpg" alt="avik_sarkar" class="w-48 h-48 rounded-full object-cover shadow-lg mx-auto md:mx-0">
+                        <img src="images/avik_sarkar.jpg" alt="avik_sarkar" class="w-48 h-48 sm:w-32 sm:h-32 rounded-full object-cover shadow-lg mx-auto md:mx-0">
                     </div>
                     <div class="flex-grow text-center md:text-left">
                         <p class="text-lg leading-relaxed mb-4">
