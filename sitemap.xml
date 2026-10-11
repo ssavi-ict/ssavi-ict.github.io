@@ -3,7 +3,13 @@
   <url>
     <loc>https://aviksarkar.fyi/</loc>
     <lastmod>2025-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://aviksarkar.fyi/fun/</loc>
+    <lastmod>2026-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://aviksarkar.fyi/agomoni/</loc>
+    <lastmod>2026-10-11</lastmod>
   </url>
 </urlset>

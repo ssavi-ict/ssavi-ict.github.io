@@ -23,38 +23,59 @@ let userId = 'anonymous';
 const initialCountValue = 0; 
 
 const visitorCountElement = document.getElementById('visitorCount');
+let hasInitializedCounter = false;
 
-// Initialize Firebase and set up authentication
-try {
-    console.log("Initializing Firebase app with config:", firebaseConfig);
-    app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app); // Initialize Analytics
-    db = getFirestore(app);
-    auth = getAuth(app);
-    console.log("Firebase app initialized.");
+function updateVisitorCountDisplay(value) {
+    if (!visitorCountElement) {
+        console.warn("visitorCount element not found. Counter display update skipped.");
+        return false;
+    }
 
-    onAuthStateChanged(auth, async (user) => {
-        if (user) {
-            // User is signed in
-            userId = user.uid;
-            console.log("User authenticated:", userId);
-            console.log("Calling setupVisitorCounter...");
-            setupVisitorCounter();
-        } else {
-            console.log("No user signed in. Attempting anonymous sign-in...");
-            try {
-                await signInAnonymously(auth);
-                console.log("Signed in anonymously.");
-            } catch (error) {
-                console.error("Error during Firebase authentication:", error);
-                visitorCountElement.textContent = "Auth Error!";
+    visitorCountElement.textContent = value;
+    return true;
+}
+
+function initializeFirebaseCounter() {
+    if (!visitorCountElement) {
+        console.warn("visitorCount element not found. Firebase counter initialization deferred.");
+        return;
+    }
+
+    try {
+        console.log("Initializing Firebase app with config:", firebaseConfig);
+        app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app); // Initialize Analytics
+        db = getFirestore(app);
+        auth = getAuth(app);
+        console.log("Firebase app initialized.");
+
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                userId = user.uid;
+                console.log("User authenticated:", userId);
+                console.log("Calling setupVisitorCounter...");
+                setupVisitorCounter();
+            } else {
+                console.log("No user signed in. Attempting anonymous sign-in...");
+                try {
+                    await signInAnonymously(auth);
+                    console.log("Signed in anonymously.");
+                } catch (error) {
+                    console.error("Error during Firebase authentication:", error);
+                    updateVisitorCountDisplay("Auth Error!");
+                }
             }
-        }
-    });
+        });
+    } catch (error) {
+        console.error("Error initializing Firebase:", error);
+        updateVisitorCountDisplay("Init Error!");
+    }
+}
 
-} catch (error) {
-    console.error("Error initializing Firebase:", error);
-    visitorCountElement.textContent = "Init Error!"; 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeFirebaseCounter, { once: true });
+} else {
+    initializeFirebaseCounter();
 }
 
 /**
@@ -62,20 +83,25 @@ try {
  * This function is called only after Firebase authentication is ready.
  */
 async function setupVisitorCounter() {
+    if (hasInitializedCounter) {
+        return;
+    }
+    hasInitializedCounter = true;
+
     const counterDocRef = doc(db, `artifacts/${appId}/public/data/visitor_counter`, 'global_count');
-    
+
     onSnapshot(counterDocRef, (docSnap) => {
         if (docSnap.exists()) {
             const data = docSnap.data();
-            visitorCountElement.textContent = data.count || initialCountValue; 
-            console.log("Snapshot received. Current count:", visitorCountElement.textContent);
+            updateVisitorCountDisplay(data.count ?? initialCountValue);
+            console.log("Snapshot received. Current count:", visitorCountElement?.textContent ?? initialCountValue);
         } else {
             console.log("No visitor count document found during snapshot. Displaying initial value as fallback.");
-            visitorCountElement.textContent = initialCountValue;
+            updateVisitorCountDisplay(initialCountValue);
         }
     }, (error) => {
         console.error("Error listening to visitor count (onSnapshot):", error);
-        visitorCountElement.textContent = "Firestore Error!";
+        updateVisitorCountDisplay("Firestore Error!");
     });
 
     try {
